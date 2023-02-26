@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { v4 as uuidV4 } from 'uuid';
 
 function Form({ input, setInput, todos, setTodos, editTodo, setEditTodo}) {
@@ -15,6 +15,14 @@ function Form({ input, setInput, todos, setTodos, editTodo, setEditTodo}) {
         setTodos(newTodo);
         setEditTodo(null);
     }
+    useEffect(() => {
+        if(editTodo) {
+            setInput(editTodo.title);
+        } else {
+            setInput('');
+        }
+    }, [setInput, editTodo])
+    
      
     const onFormSubmit = (e) => {
         e.preventDefault();
