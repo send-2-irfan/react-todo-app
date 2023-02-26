@@ -34,7 +34,7 @@
   padding: 15px;
   margin-right: 24px;
   font-size: 20px;
-  color: #ccc;
+  color: black;
   border: 1px solid #000000;
   border-radius: 10px;
 }
@@ -79,7 +79,7 @@
 .complete {
   text-decoration-style: solid;
   text-decoration-line: line-through;
-  text-decoration-color: #ff6c6c;
+  text-decoration-color: #8f6161;
   opacity: 0.6;
 }
 .list {
@@ -95,4 +95,8 @@
 input:focus,
 button:focus {
   outline: none;
+}
+.button-delete {
+  color: #ff0000;
+  margin-left: 2PX;
 }
