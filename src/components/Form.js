@@ -22,7 +22,7 @@ function Form({ input, setInput, todos, setTodos, editTodo, setEditTodo}) {
             setInput('');
         }
     }, [setInput, editTodo])
-    
+
      
     const onFormSubmit = (e) => {
         e.preventDefault();
@@ -51,7 +51,7 @@ function Form({ input, setInput, todos, setTodos, editTodo, setEditTodo}) {
                 value={input}
                 onChange={onInputChange}
             />
-            <button className='button-add' type='submit'>Add</button>
+            <button className='button-add' type='submit'>{editTodo ? "OK" : 'Add'}</button>
         </form>
     </div>
   )
